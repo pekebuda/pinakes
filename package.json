@@ -9,6 +9,7 @@
   "description": "Aplicacion para la catalogacion y organizacion de bibliotecas",
   "homepage": "https://github.com/pekebuda/pinakes",
   "private": false,
+  "main": "electron/electron.js",
   "scripts": {
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
