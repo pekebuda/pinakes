@@ -4,9 +4,10 @@
   "author": {
     "name": "Fernando Diaz",
     "email": "f.diazlaclaustra@umlaud.es",
-    "url": "https://lohanitech.com/members/damodar-lohani"
+    "url": "https://github.com/pekebuda/"
   },
-  "homepage": "http://ionicframework.com/",
+  "description": "Aplicacion para la catalogacion y organizacion de bibliotecas",
+  "homepage": "https://github.com/pekebuda/pinakes",
   "private": false,
   "scripts": {
     "start": "ionic-app-scripts serve",
@@ -41,5 +42,13 @@
     "foreman": "^3.0.1",
     "typescript": "~2.6.2"
   },
-  "description": "Aplicacion para la catalogacion y organizacion de bibliotecas"
+  "build": {
+    "appId": "me.pekebuda.pinakes",
+    "electronVersion": "1.7.5",
+    "asar":false,
+    "files": [
+      "www/**/*",
+      "electron/*"
+    ]
+  }
 }
