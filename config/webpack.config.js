@@ -26,7 +26,6 @@ var optimizedProdLoaders = [
       {
         loader: process.env.IONIC_CACHE_LOADER
       },
-
       {
         loader: '@angular-devkit/build-optimizer/webpack-loader',
         options: {
@@ -41,14 +40,12 @@ var optimizedProdLoaders = [
       {
         loader: process.env.IONIC_CACHE_LOADER
       },
-
       {
         loader: '@angular-devkit/build-optimizer/webpack-loader',
         options: {
           sourceMap: true
         }
       },
-
       {
         loader: process.env.IONIC_WEBPACK_LOADER
       }
@@ -63,7 +60,7 @@ function getProdLoaders() {
   return devConfig.module.loaders;
 }
 
-const externals: [
+const externals = [
   (function () {
     var IGNORES = [
       "fs","child_process","electron","path","assert","cluster","crypto","dns",
@@ -78,7 +75,7 @@ const externals: [
       return callback();
     };
   })()
-],
+];
 
 var devConfig = {
   entry: process.env.IONIC_APP_ENTRY_POINT,
