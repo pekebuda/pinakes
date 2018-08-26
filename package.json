@@ -12,9 +12,14 @@
   "main": "electron/electron.js",
   "scripts": {
     "start": "ionic-app-scripts serve",
-    "clean": "ionic-app-scripts clean",
+    "dev": "nf start",
+    "electron dist": "electron .",
+    "ebuild":"npm run build && node_modules/.bin/build",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "ionic:build": "ionic-app-scripts build",
+    "clean": "ionic-app-scripts clean",
+    "lint": "ionic-app-scripts lint",
+    "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
