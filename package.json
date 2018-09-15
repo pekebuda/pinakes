@@ -11,15 +11,15 @@
   "private": false,
   "main": "electron/electron.js",
   "scripts": {
-    "start": "ionic-app-scripts serve",
-    "dev": "nf start",
-    "electron dist": "electron .",
-    "ebuild":"npm run build && node_modules/.bin/build",
-    "build": "ionic-app-scripts build",
+    "start": "npm run ionic:serve",
+    "build": "npm run ionic:build",
+    "foreman:start": "nf start",
+    "ionic:clean": "ionic-app-scripts clean",
     "ionic:build": "ionic-app-scripts build",
-    "clean": "ionic-app-scripts clean",
-    "lint": "ionic-app-scripts lint",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:lint": "ionic-app-scripts lint",
+    "ionic:serve": "ionic-app-scripts serve",
+    "electron:dist": "electron .",
+    "electron:build":"npm run ionic:build && node_modules/.bin/build"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
