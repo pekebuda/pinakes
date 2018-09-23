@@ -81,7 +81,7 @@ var prodConfig = {
   module: {
     loaders: (process.env.IONIC_OPTIMIZE_JS === 'true')?
       optimizedLoaders
-      : devConfig.module.loaders;
+      : devConfig.module.loaders
   },
 
   plugins: [
