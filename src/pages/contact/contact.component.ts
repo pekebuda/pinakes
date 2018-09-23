@@ -5,14 +5,14 @@ import { NavController } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-contact',
+  templateUrl: 'contact.component.html'
 })
 
 
 
 
-export class HomePage {
+export class ContactPage {
 
   constructor(public navCtrl: NavController) {
 
