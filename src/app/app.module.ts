@@ -6,6 +6,7 @@ import { Pinakes } from './app.component';
 
 import { HomePage } from '../pages/home/home.component';
 import { LibraryPage } from '../pages/library/library.component';
+import { BookComponent } from '../pages/library/book.component';
 import { AboutPage } from '../pages/about/about.component';
 import { ContactPage } from '../pages/contact/contact.component';
 import { TabsPage } from '../pages/tabs/tabs.component';
@@ -21,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     Pinakes,
     HomePage,
     LibraryPage,
+    BookComponent,
     ContactPage,
     AboutPage,
     TabsPage,
