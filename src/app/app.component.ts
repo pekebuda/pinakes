@@ -11,11 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs.component';
 @Component({
   templateUrl: 'app.component.html'
 })
-
-
-
-
-export class MyApp {
+export class Pinakes {
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

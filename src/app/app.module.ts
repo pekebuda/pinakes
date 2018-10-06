@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
-import { MyApp } from './app.component';
+import { Pinakes } from './app.component';
 
 import { HomePage } from '../pages/home/home.component';
 import { LibraryPage } from '../pages/library/library.component';
@@ -18,7 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
+    Pinakes,
     HomePage,
     LibraryPage,
     ContactPage,
@@ -27,11 +27,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(Pinakes)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    Pinakes,
     HomePage,
     LibraryPage,
     ContactPage,
@@ -44,4 +44,4 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class PinakesModule {}
