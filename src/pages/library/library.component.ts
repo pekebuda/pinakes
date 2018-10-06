@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { List } from 'ionic-angular';
+
 import { Book } from '../../models/book';
 import { BOOKS } from '../../mock/books'
 
@@ -11,7 +13,7 @@ import { BOOKS } from '../../mock/books'
 export class LibraryPage implements OnInit {
 
   books: Book[] = BOOKS;
-  selectedBook: Book;
+  selectedBook: Book = null;
 
   constructor() { }
 
