@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { List } from 'ionic-angular';
 
+import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book';
-import { BOOKS } from '../../mock/books'
 
 
 
@@ -13,12 +13,18 @@ import { BOOKS } from '../../mock/books'
 })
 export class LibraryPage implements OnInit {
 
-  books: Book[] = BOOKS;
+  books: Book[];
   selectedBook: Book = null;
 
-  constructor() { }
+  constructor (private bookService: BookService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.retrieveBooks();
+  }
+
+  retrieveBooks(): void {
+    this.books = this.bookService.getBooks();
+  }
 
   onSelect(book: Book): void {
     this.selectedBook = book;
