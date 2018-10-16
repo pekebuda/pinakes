@@ -60,6 +60,7 @@
   "config": {
     "ionic_bundler": "webpack",
     "ionic_webpack": "./config/webpack.config.js",
+    "ionic_app_entry_point": "src/main.ts",
     "ionic_app_ng_module_path": "src/app/pinakes.module.ts"
   }
 }
