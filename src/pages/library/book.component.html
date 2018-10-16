@@ -1,11 +1,27 @@
-<div *ngIf='book'>
-  <h2>{{book.title | uppercase}} Details</h2>
-  <div>
-    <span>id: </span>{{book.id}}
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Description
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf='book'>
+    <h2>{{book.title | uppercase}} Details</h2>
+    <div>
+      <span>id: </span>{{book.id}}
+    </div>
+    <!-- <label>title: <input [(ngModel)]="book.title" placeholder="Titulo"></label> -->
+    <div>
+      <span>author: </span>
+      <span>{{book.author}}</span>
+    </div>
   </div>
-  <label>title: <input [(ngModel)]="book.title" placeholder="Titulo"></label>
-  <div>
-    <span>author: </span>
-    <span>{{book.author}}</span>
-  </div>
-</div>
+</ion-content>
