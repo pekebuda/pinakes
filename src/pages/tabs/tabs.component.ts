@@ -9,14 +9,14 @@ import { AboutPage } from '../about/about.component';
 
 
 @Component({
-  templateUrl: 'tabs.component.html'
+  templateUrl: './tabs.component.html'
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = LibraryPage;
-  tab3Root = ContactPage
-  tab4Root = AboutPage;
+  firstTabRoot = HomePage;
+  secondTabRoot = LibraryPage;
+  thirdTabRoot = ContactPage
+  forthTabRoot = AboutPage;
 
   constructor () {}
 }
