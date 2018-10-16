@@ -7,6 +7,8 @@ var ionicWebpackFactory = require(process.env.IONIC_WEBPACK_FACTORY);
 const devConfig = require('./webpack.config.dev.js');
 
 
+
+
 const externals = [
   (function () {
     var IGNORES = [
@@ -24,7 +26,8 @@ const externals = [
   })()
 ];
 
-var optimizedLoaders = [
+
+const optimizedLoaders = [
   {
     test: /\.json$/,
     loader: 'json-loader'
@@ -62,6 +65,7 @@ var optimizedLoaders = [
   }
 ];
 
+
 var prodConfig = {
   entry: process.env.IONIC_APP_ENTRY_POINT,
   output: {
@@ -72,18 +76,15 @@ var prodConfig = {
   },
   externals: externals,
   devtool: process.env.IONIC_SOURCE_MAP_TYPE,
-
   resolve: {
     extensions: ['.ts', '.js', '.json'],
     modules: [path.resolve('node_modules')]
   },
-
   module: {
     loaders: (process.env.IONIC_OPTIMIZE_JS === 'true')?
       optimizedLoaders
       : devConfig.module.loaders
   },
-
   plugins: [
     new Dotenv({
       path: '.env.prod', // load this now instead of the ones in '.env'
@@ -95,7 +96,6 @@ var prodConfig = {
     new ModuleConcatPlugin(),
     new PurifyPlugin()
   ],
-
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {

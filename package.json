@@ -13,13 +13,13 @@
   "scripts": {
     "start": "npm run ionic:serve",
     "build": "npm run ionic:build",
-    "foreman:start": "nf start",
+    "ionic:lint": "ionic-app-scripts lint",
     "ionic:clean": "ionic-app-scripts clean",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:lint": "ionic-app-scripts lint",
     "ionic:serve": "ionic-app-scripts serve",
     "electron:dist": "electron .",
-    "electron:build":"npm run ionic:build && node_modules/.bin/build"
+    "electron:build":"npm run ionic:build && node_modules/.bin/build",
+    "foreman:start": "nf start"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",

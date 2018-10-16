@@ -6,6 +6,8 @@ var PurifyPlugin = require('@angular-devkit/build-optimizer').PurifyPlugin;
 var ionicWebpackFactory = require(process.env.IONIC_WEBPACK_FACTORY);
 
 
+
+
 const externals = [
   (function () {
     var IGNORES = [
@@ -23,6 +25,7 @@ const externals = [
   })()
 ];
 
+
 var devConfig = {
   entry: process.env.IONIC_APP_ENTRY_POINT,
   output: {
@@ -33,12 +36,10 @@ var devConfig = {
   },
   externals: externals,
   devtool: process.env.IONIC_SOURCE_MAP_TYPE,
-
   resolve: {
     extensions: ['.ts', '.js', '.json'],
     modules: [path.resolve('node_modules')]
   },
-
   module: {
     loaders: [
       {
@@ -51,17 +52,15 @@ var devConfig = {
       }
     ]
   },
-
   plugins: [
     new Dotenv({
       path: '.env.dev', // load this now instead of the ones in '.env'
       systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
-      silent: true // hide any errors
+      silent: false // hide any errors
     }),
     ionicWebpackFactory.getIonicEnvironmentPlugin(),
     ionicWebpackFactory.getCommonChunksPlugin()
   ],
-
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {
