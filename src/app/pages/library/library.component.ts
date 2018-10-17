@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { List, ModalController } from 'ionic-angular';
 
-import { BookService } from '../../../services/book.service';
+import { BookService } from '../../services/book.service';
 import { BookComponent } from './book.component';
 import { Book } from '../../../models/book';
 

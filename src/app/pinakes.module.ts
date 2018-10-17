@@ -14,7 +14,7 @@ import { ContactPage } from './pages/contact/contact.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { BookService } from '../services/book.service';
+import { BookService } from './services/book.service';
 
 
 
