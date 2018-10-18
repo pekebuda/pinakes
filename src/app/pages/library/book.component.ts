@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ViewController, NavParams } from 'ionic-angular';
+import { ViewController, NavParams } from '@ionic/angular';
 
 import { Book } from '../../../models/book';
 
