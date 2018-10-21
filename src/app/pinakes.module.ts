@@ -1,7 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { RouteReuseStrategy } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicModule, IonicApp, IonicErrorHandler } from '@ionic/angular';
 
+import { IonicModule, IonicErrorHandler, IonicRouteStrategy } from '@ionic/angular';
+
+import { AppRoutingModule } from './app-routing.module';
 import { App } from './app.component';
 
 import { HomePage } from './pages/home/home.component';
@@ -18,7 +21,13 @@ import { BookService } from './services/book.service';
 
 
 
+
 @NgModule({
+  imports: [
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    BrowserModule
+  ],
   declarations: [
     App,
     TabsPage,
@@ -28,25 +37,14 @@ import { BookService } from './services/book.service';
     ContactPage,
     AboutPage,
   ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(App)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    App,
-    TabsPage,
-    HomePage,
-    LibraryPage,
-    BookComponent,
-    ContactPage,
-    AboutPage,
-  ],
+  bootstrap: [App],
+  entryComponents: [],
   providers: [
     StatusBar,
     SplashScreen,
     BookService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
   ]
 })
 export class Pinakes {}
