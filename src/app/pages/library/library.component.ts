@@ -27,9 +27,9 @@ export class LibraryPage implements OnInit {
     this.books = this.bookSrv.getBooks();
   }
 
-  onSelect(book: Book): void {
+  async onSelect(book: Book) {
     this.selectedBook = book;
-    let bookDetailModal = this.modalCtrl.create(BookComponent, {book: book});
-    bookDetailModal.present();
+    let bookDetailModal = await this.modalCtrl.create({component: BookComponent, componentProps: book});
+    await bookDetailModal.present();
   }
 }
