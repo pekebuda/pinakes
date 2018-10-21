@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@ionic/router';
-
+import { Router } from '@angular/router';
 
 
 
