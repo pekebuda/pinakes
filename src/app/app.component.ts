@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
 import { Platform } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-
-import { TabsPage } from './pages/tabs/tabs.component';
 
 
 
@@ -13,8 +13,6 @@ import { TabsPage } from './pages/tabs/tabs.component';
   templateUrl: 'app.component.html'
 })
 export class App {
-  rootPage:any = TabsPage;
-
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,
