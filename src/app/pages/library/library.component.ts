@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { List, ModalController } from '@ionic/angular';
 
 import { BookService } from '../../services/book.service';
@@ -30,6 +31,6 @@ export class LibraryPage implements OnInit {
   async onSelect(book: Book) {
     this.selectedBook = book;
     let bookDetailModal = await this.modalCtrl.create({component: BookComponent, componentProps: book});
-    await bookDetailModal.present();
+    return await bookDetailModal.present();
   }
 }
