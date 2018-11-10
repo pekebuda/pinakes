@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { HomePage } from '../home/home.component';
 import { LibraryPage } from '../library/library.component';
@@ -9,14 +10,10 @@ import { AboutPage } from '../about/about.component';
 
 
 @Component({
+  selector: 'app-tabs',
   templateUrl: './tabs.component.html'
 })
 export class TabsPage {
-
-  firstTabRoot = HomePage;
-  secondTabRoot = LibraryPage;
-  thirdTabRoot = ContactPage
-  forthTabRoot = AboutPage;
 
   constructor () {}
 }
