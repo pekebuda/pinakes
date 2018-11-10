@@ -7,7 +7,9 @@ import { BOOKS } from '../../mock/books';
 
 
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class BookService {
 
   constructor () {}
