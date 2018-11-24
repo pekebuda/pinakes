@@ -18,7 +18,7 @@ export class BookComponent implements OnInit {
 
   constructor(public modalCtrl: ModalController, private route: ActivatedRoute) {
     this.route.params
-      .subscribe((data)=>{this.book = data});
+      .subscribe((data) => { this.book = data; });
   }
 
   ngOnInit() {}

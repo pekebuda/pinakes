@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 import { TabsRoutingModule } from './tabs-routing.module';
 import { TabsPage } from './tabs.component';
 import { HomePage } from '../home/home.component';
+import { LibraryPage } from '../library/library.component';
+import { ContactPage } from '../contact/contact.component';
+import { AboutPage } from '../about/about.component';
 
 
 
@@ -18,7 +21,10 @@ import { HomePage } from '../home/home.component';
   ],
   declarations: [
     TabsPage,
-    HomePage
+    HomePage,
+    LibraryPage,
+    ContactPage,
+    AboutPage
   ],
   exports: []
 })
