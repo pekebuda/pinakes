@@ -6,30 +6,31 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
-import { App } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { App } from './app.component';
 
 
 
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
   ],
   declarations: [
     App,
   ],
-  bootstrap: [
-    App
-  ],
-  entryComponents: [],
+  exports: [],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: ErrorHandler},
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
-  ]
+  ],
+  entryComponents: [],
+  bootstrap: [
+    App
+  ],
 })
 export class Pinakes {}

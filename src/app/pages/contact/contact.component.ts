@@ -14,8 +14,6 @@ import { Router } from '@angular/router';
 
 export class ContactPage {
 
-  constructor(private router: Router) {
-
-  }
+  constructor () {}
 
 }

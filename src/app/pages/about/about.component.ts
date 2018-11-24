@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 
 
@@ -7,14 +6,8 @@ import { Router } from '@angular/router';
   selector: 'page-about',
   templateUrl: 'about.component.html'
 })
-
-
-
-
 export class AboutPage {
 
-  constructor(private router: Router) {
-
-  }
+  constructor () { }
 
 }
