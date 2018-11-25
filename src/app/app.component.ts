@@ -11,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
-export class App {
+export class AppComponent {
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,

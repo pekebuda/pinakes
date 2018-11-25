@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
-import { App } from './app.component';
+import { AppComponent } from './app.component';
 
 
 
@@ -19,7 +19,7 @@ import { App } from './app.component';
     AppRoutingModule,
   ],
   declarations: [
-    App,
+    AppComponent,
   ],
   exports: [],
   providers: [
@@ -30,7 +30,7 @@ import { App } from './app.component';
   ],
   entryComponents: [],
   bootstrap: [
-    App
+    AppComponent
   ],
 })
 export class AppModule {}
