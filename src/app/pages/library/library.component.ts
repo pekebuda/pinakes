@@ -13,7 +13,7 @@ import { Book } from '../../../models/book';
   selector: 'library',
   templateUrl: './library.component.html',
 })
-export class LibraryPage implements OnInit {
+export class LibraryComponent implements OnInit {
 
   books: Book[];
   selectedBook: Book = null;

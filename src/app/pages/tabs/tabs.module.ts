@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
 import { TabsRouterModule } from './tabs-router.module';
-import { TabsPage } from './tabs.component';
-import { HomePage } from '../home/home.component';
-import { LibraryPage } from '../library/library.component';
-import { ContactPage } from '../contact/contact.component';
-import { AboutPage } from '../about/about.component';
+import { TabsComponent } from './tabs.component';
+import { HomeComponent } from '../home/home.component';
+import { LibraryComponent } from '../library/library.component';
+import { ContactComponent } from '../contact/contact.component';
+import { AboutComponent } from '../about/about.component';
 import { BookComponent } from '../library/book.component';
 import { BookService } from '../../services/book.service';
 
@@ -23,11 +23,11 @@ import { BookService } from '../../services/book.service';
     TabsRouterModule,
   ],
   declarations: [
-    TabsPage,
-    HomePage,
-    LibraryPage,
-    ContactPage,
-    AboutPage,
+    TabsComponent,
+    HomeComponent,
+    LibraryComponent,
+    ContactComponent,
+    AboutComponent,
     BookComponent
   ],
   providers: [

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 
 
 
-export class ContactPage {
+export class ContactComponent {
 
   constructor () {}
 

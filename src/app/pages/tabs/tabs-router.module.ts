@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { TabsPage } from '../tabs/tabs.component';
-import { HomePage } from '../home/home.component';
-import { LibraryPage } from '../library/library.component';
-import { AboutPage } from '../about/about.component';
-import { ContactPage } from '../contact/contact.component';
+import { TabsComponent } from '../tabs/tabs.component';
+import { HomeComponent } from '../home/home.component';
+import { LibraryComponent } from '../library/library.component';
+import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 
 
 const ROUTES: Routes = [
   {
     path: 'tabs',
-    component: TabsPage,
+    component: TabsComponent,
     children: [
       {
         path: '',
@@ -21,22 +21,22 @@ const ROUTES: Routes = [
       },
       {
         path: 'home',
-        component: HomePage,
+        component: HomeComponent,
         outlet: 'home'
       },
       {
         path: 'library',
-        component: LibraryPage,
+        component: LibraryComponent,
         outlet: 'library'
       },
       {
         path: 'about',
-        component: AboutPage,
+        component: AboutComponent,
         outlet: 'about'
       },
       {
         path: 'contact',
-        component: ContactPage,
+        component: ContactComponent,
         outlet: 'contact'
       },
     ]
