@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TabsRoutingModule } from './tabs-routing.module';
+import { TabsRouterModule } from './tabs-router.module';
 import { TabsPage } from './tabs.component';
 import { HomePage } from '../home/home.component';
 import { LibraryPage } from '../library/library.component';
@@ -20,7 +20,7 @@ import { BookService } from '../../services/book.service';
   imports: [
     IonicModule,
     CommonModule,
-    TabsRoutingModule,
+    TabsRouterModule,
   ],
   declarations: [
     TabsPage,

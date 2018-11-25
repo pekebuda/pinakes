@@ -58,4 +58,4 @@ const ROUTES: Routes = [
     RouterModule
   ]
 })
-export class TabsRoutingModule {}
+export class TabsRouterModule {}

@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRouterModule } from './app-router.module';
 import { AppComponent } from './app.component';
 
 
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
+    AppRouterModule,
   ],
   declarations: [
     AppComponent,
