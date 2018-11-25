@@ -7,6 +7,7 @@ import { Pinakes } from './app/pinakes.module';
 
 
 
+
 if (environment.production) enableProdMode();
 platformBrowserDynamic().bootstrapModule(Pinakes)
   .catch(err => console.log(err));

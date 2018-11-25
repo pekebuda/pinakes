@@ -10,6 +10,9 @@ import { HomePage } from '../home/home.component';
 import { LibraryPage } from '../library/library.component';
 import { ContactPage } from '../contact/contact.component';
 import { AboutPage } from '../about/about.component';
+import { BookComponent } from '../library/book.component';
+import { BookService } from '../../services/book.service';
+
 
 
 
@@ -24,8 +27,15 @@ import { AboutPage } from '../about/about.component';
     HomePage,
     LibraryPage,
     ContactPage,
-    AboutPage
+    AboutPage,
+    BookComponent
   ],
-  exports: []
+  providers: [
+    BookService
+  ],
+  entryComponents: [
+    BookComponent
+  ],
+  exports: [],
 })
 export class TabsModule {}

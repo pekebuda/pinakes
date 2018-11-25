@@ -53,6 +53,7 @@ const ROUTES: Routes = [
   imports: [
     RouterModule.forChild(ROUTES)
   ],
+  declarations: [],
   exports: [
     RouterModule
   ]
