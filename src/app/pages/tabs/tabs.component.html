@@ -1,6 +1,14 @@
 <ion-tabs>
-  <ion-tab [root]="firstTabRoot" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="secondTabRoot" tabTitle="Library" tabIcon="book"></ion-tab>
-  <ion-tab [root]="thirdTabRoot" tabTitle="Contact" tabIcon="mail-open"></ion-tab>
-  <ion-tab [root]="forthTabRoot" tabTitle="About" tabIcon="information-circle"></ion-tab>
+  <ion-tab label="Home" icon="home" href="/tabs/(home:home)">
+    <ion-router-outlet name="home"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Library" icon="book" href="/tabs/(library:library)">
+    <ion-router-outlet name="library"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Contact" icon="mail-open" href="/tabs/(contact:contact)">
+    <ion-router-outlet name="contact"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="About" icon="information-circle" href="/tabs/(about:about)">
+    <ion-router-outlet name="about"></ion-router-outlet>
+  </ion-tab>
 </ion-tabs>

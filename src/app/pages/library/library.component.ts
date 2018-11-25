@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { List, ModalController } from 'ionic-angular';
+
+import { List, ModalController } from '@ionic/angular';
 
 import { BookService } from '../../services/book.service';
 import { BookComponent } from './book.component';
@@ -27,9 +28,9 @@ export class LibraryPage implements OnInit {
     this.books = this.bookSrv.getBooks();
   }
 
-  onSelect(book: Book): void {
+  async onSelect(book: Book) {
     this.selectedBook = book;
-    let bookDetailModal = this.modalCtrl.create(BookComponent, {book: book});
-    bookDetailModal.present();
+    const bookDetailModal = await this.modalCtrl.create({component: BookComponent, componentProps: book});
+    return await bookDetailModal.present();
   }
 }

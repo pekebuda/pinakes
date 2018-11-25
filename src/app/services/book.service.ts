@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable, of } from 'rxjs';
 
 import { Book } from '../../models/book';
 import { BOOKS } from '../../mock/books';
@@ -8,7 +7,9 @@ import { BOOKS } from '../../mock/books';
 
 
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class BookService {
 
   constructor () {}

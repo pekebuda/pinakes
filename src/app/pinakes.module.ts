@@ -1,52 +1,36 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { RouteReuseStrategy } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicModule, IonicApp, IonicErrorHandler } from 'ionic-angular';
 
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+
+import { AppRoutingModule } from './app-routing.module';
 import { App } from './app.component';
 
-import { HomePage } from './pages/home/home.component';
-import { TabsPage } from './pages/tabs/tabs.component';
-import { LibraryPage } from './pages/library/library.component';
-import { BookComponent } from './pages/library/book.component';
-import { AboutPage } from './pages/about/about.component';
-import { ContactPage } from './pages/contact/contact.component';
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { BookService } from './services/book.service';
 
 
 
 @NgModule({
-  declarations: [
-    App,
-    TabsPage,
-    HomePage,
-    LibraryPage,
-    BookComponent,
-    ContactPage,
-    AboutPage,
-  ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(App)
+    IonicModule.forRoot(),
+    AppRoutingModule,
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
+  declarations: [
     App,
-    TabsPage,
-    HomePage,
-    LibraryPage,
-    BookComponent,
-    ContactPage,
-    AboutPage,
   ],
+  exports: [],
   providers: [
     StatusBar,
     SplashScreen,
-    BookService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: ErrorHandler},
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
+  ],
+  entryComponents: [],
+  bootstrap: [
+    App
+  ],
 })
 export class Pinakes {}

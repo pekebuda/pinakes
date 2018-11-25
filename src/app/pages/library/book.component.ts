@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ViewController, NavParams } from 'ionic-angular';
+import { ActivatedRoute } from '@angular/router';
+
+import { ModalController } from '@ionic/angular';
 
 import { Book } from '../../../models/book';
 
@@ -12,15 +14,16 @@ import { Book } from '../../../models/book';
 })
 export class BookComponent implements OnInit {
 
-  @Input() book: Book = null;
+  @Input() book: any = null;
 
-  constructor(public viewCtrl: ViewController, private params: NavParams) {
-    this.book = this.params.data.book;
+  constructor(public modalCtrl: ModalController, private route: ActivatedRoute) {
+    this.route.params
+      .subscribe((data) => { this.book = data; });
   }
 
   ngOnInit() {}
 
   dismiss() {
-    this.viewCtrl.dismiss();
+    this.modalCtrl.dismiss();
   }
 }
