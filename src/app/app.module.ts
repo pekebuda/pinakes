@@ -33,4 +33,4 @@ import { App } from './app.component';
     App
   ],
 })
-export class Pinakes {}
+export class AppModule {}
