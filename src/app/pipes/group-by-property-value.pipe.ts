@@ -37,7 +37,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  *
  * [
     {
-        key: "Green",
+        grouper: "Green",
         values: [
             {
                 name: "Apple",
@@ -50,7 +50,7 @@ import { Pipe, PipeTransform } from '@angular/core';
         ]
     },
     {
-        key: "Yellow",
+        grouper: "Yellow",
         values: [
             {
                 name: "Banana",
@@ -63,7 +63,7 @@ import { Pipe, PipeTransform } from '@angular/core';
         ]
     },
     {
-        key: "Orange",
+        grouper: "Orange",
         values: [
             {
                 name: "Orange",
@@ -80,7 +80,9 @@ export class GroupByPropertyValuePipe implements PipeTransform {
     if(!collection) return null; // prevents the application from breaking
 
     const groupedCollection = collection.reduce((accumulator, current) => {
-      if(!accumulator[current[grouper]]) {
+      if (!current[grouper]) {
+        //TODO se podria crear un valor especial para grouper, vgr $undefined
+      } else if(!accumulator[current[grouper]]) {
         accumulator[current[grouper]] = [current];
       } else {
         accumulator[current[grouper]].push(current);
