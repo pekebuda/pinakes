@@ -14,14 +14,14 @@ import { Book } from '../../../models/book';
 })
 export class BookComponent implements OnInit {
 
-  @Input() book: any = null;
+  @Input() book: Book = null;
 
   constructor(public modalCtrl: ModalController, private route: ActivatedRoute) {
-    this.route.params
-      .subscribe((data) => { this.book = data; });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   dismiss() {
     this.modalCtrl.dismiss();

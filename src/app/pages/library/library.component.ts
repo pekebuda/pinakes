@@ -18,7 +18,7 @@ export class LibraryComponent implements OnInit {
   books: Book[];
   selectedBook: Book = null;
 
-  constructor (public modalCtrl: ModalController, private bookSrv: BookService) {}
+  constructor(public modalCtrl: ModalController, private bookSrv: BookService) {}
 
   ngOnInit() {
     this.retrieveBooks();
@@ -28,9 +28,10 @@ export class LibraryComponent implements OnInit {
     this.books = this.bookSrv.getBooks();
   }
 
-  async onSelect(book: Book) {
+  async selectBook(book: Book) {
+    console.log(book);
     this.selectedBook = book;
-    const bookDetailModal = await this.modalCtrl.create({component: BookComponent, componentProps: book});
+    const bookDetailModal = await this.modalCtrl.create({component: BookComponent, componentProps: {book: book}});
     return await bookDetailModal.present();
   }
 }
