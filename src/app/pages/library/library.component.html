@@ -1,5 +1,8 @@
-<ion-list inset class='books'>
-  <div ion-item *ngFor='let book of books' (click)='onSelect(book)'>
-    <span>{{book.title}}</span>
+<ion-list class="books">
+  <div *ngFor="let el of books | groupByPropertyInitial:'title'">
+    <ion-item-divider color="light">{{el.grouper}}</ion-item-divider>
+    <div ion-item *ngFor="let book of el.values" (click)="onSelect(book)">
+      <span>{{book.title}}</span>
+    </div>
   </div>
 </ion-list>

@@ -12,6 +12,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { BookComponent } from '../library/book.component';
 import { BookService } from '../../services/book.service';
+import { GroupByPropertyInitialPipe } from '../../pipes/group-by-property-initial.pipe';
 
 
 
@@ -28,7 +29,8 @@ import { BookService } from '../../services/book.service';
     LibraryComponent,
     ContactComponent,
     AboutComponent,
-    BookComponent
+    BookComponent,
+    GroupByPropertyInitialPipe,
   ],
   providers: [
     BookService
