@@ -1,8 +1,11 @@
 <ion-list class="books">
   <div *ngFor="let el of books | groupByPropertyInitial:'title'">
     <ion-item-divider color="light">{{el.grouper}}</ion-item-divider>
-    <div ion-item *ngFor="let book of el.values" (click)="onSelect(book)">
-      <span>{{book.title}}</span>
-    </div>
+    <ion-item lines="inset" *ngFor="let book of el.values" (click)="onSelect(book)">
+      <ion-label>
+        <h2>{{book.title}}</h2>
+        <p>{{book.author}}</p>
+      </ion-label>
+    </ion-item>
   </div>
 </ion-list>
