@@ -76,13 +76,13 @@ import { Pipe, PipeTransform } from '@angular/core';
  * @param {} grouper
  */
 export class GroupByPropertyValuePipe implements PipeTransform {
-  transform (collection: Array, grouper: string) : Array {
+  transform (collection: any[], grouper: string) : Array {
     if(!collection) return null; // prevents the application from breaking
 
     const groupedCollection = collection.reduce((accumulator, current) => {
       if (!current[grouper]) {
         //TODO se podria crear un valor especial para grouper, vgr $undefined
-      } else if(!accumulator[current[grouper]]) {
+      } else if (!accumulator[current[grouper]]) {
         accumulator[current[grouper]] = [current];
       } else {
         accumulator[current[grouper]].push(current);
