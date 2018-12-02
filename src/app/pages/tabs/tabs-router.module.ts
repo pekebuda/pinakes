@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from '../tabs/tabs.component';
 import { HomeComponent } from '../home/home.component';
 import { LibraryComponent } from '../library/library.component';
-import { AboutComponent } from '../about/about.component';
-import { ContactComponent } from '../contact/contact.component';
+import { SettingsComponent } from '../settings/settings.component';
+
 
 
 
@@ -30,15 +30,10 @@ const ROUTES: Routes = [
         outlet: 'library'
       },
       {
-        path: 'about',
-        component: AboutComponent,
-        outlet: 'about'
-      },
-      {
-        path: 'contact',
-        component: ContactComponent,
-        outlet: 'contact'
-      },
+        path: 'settings',
+        component: SettingsComponent,
+        outlet: 'settings'
+      }
     ]
   },
   {

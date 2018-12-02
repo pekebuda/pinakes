@@ -8,9 +8,8 @@ import { TabsRouterModule } from './tabs-router.module';
 import { TabsComponent } from './tabs.component';
 import { HomeComponent } from '../home/home.component';
 import { LibraryComponent } from '../library/library.component';
-import { ContactComponent } from '../contact/contact.component';
-import { AboutComponent } from '../about/about.component';
 import { BookComponent } from '../library/book.component';
+import { SettingsComponent } from '../settings/settings.component';
 import { BookService } from '../../services/book.service';
 import { GroupByPropertyInitialPipe } from '../../pipes/group-by-property-initial.pipe';
 
@@ -27,9 +26,8 @@ import { GroupByPropertyInitialPipe } from '../../pipes/group-by-property-initia
     TabsComponent,
     HomeComponent,
     LibraryComponent,
-    ContactComponent,
-    AboutComponent,
     BookComponent,
+    SettingsComponent,
     GroupByPropertyInitialPipe,
   ],
   providers: [
