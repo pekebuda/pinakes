@@ -76,7 +76,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  * @param {} grouper
  */
 export class GroupByPropertyValuePipe implements PipeTransform {
-  transform (collection: Array, grouper: String) : Array {
+  transform (collection: Array, grouper: string) : Array {
     if(!collection) return null; // prevents the application from breaking
 
     const groupedCollection = collection.reduce((accumulator, current) => {
