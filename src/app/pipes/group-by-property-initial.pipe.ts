@@ -6,8 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 /**
  * @description
- * this will return an array of objects, each object containing a group of
- * objects
+ * this will return an array of objects, each object itself containing a group
+ * of objects.
+ * Este tipo de pipes tienen repercusiones serias sobre el rendimiento que deben
+ * ser cuidadosamente consideradas (vid https://angular.io/guide/pipes#no-filter-pipe)
  *
  * @example
  * var myArray = [
@@ -76,7 +78,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  * @param {} grouper
  */
 export class GroupByPropertyInitialPipe implements PipeTransform {
-  transform (collection: any[], grouper: string) : Array {
+  transform (collection: any[], grouper: string): any[] {
     if(!collection) return null; // prevents the application from breaking
 
     const groupedCollection = collection.reduce((accumulator, current) => {
